@@ -1,0 +1,6 @@
+{
+  "name": "NextStep",
+  "description": "Professional network and job portal replica with real-time networking, job search, recruiter tools, and career intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

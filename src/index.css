@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-primary: #0A66C2;
+  --color-primary-hover: #004182;
+  --color-primary-subtle: #EBF4FD;
+  --color-page-bg: #F4F2EE;
+  --color-card: #FFFFFF;
+  --color-card-hover: #F8FAFC;
+  --color-border: #E0DFDC;
+  --color-border-subtle: #F0EFEB;
+  --color-text: #191919;
+  --color-text-secondary: #474747;
+  --color-muted: #666666;
+  --color-input-bg: #EDF3F8;
+  --color-input-focus: #FFFFFF;
+  --color-success: #057642;
+  --color-success-subtle: #E6F4EA;
+  --color-danger: #CC1016;
+  --color-danger-subtle: #FCE8E6;
+  --color-gold: #C37D16;
+  --color-gold-subtle: #FEF7E0;
+  --color-nav-bg: #FFFFFF;
+  --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.dark {
+  --color-primary: #71B7FB;
+  --color-primary-hover: #98CBFF;
+  --color-primary-subtle: #12283E;
+  --color-page-bg: #0B0F14;
+  --color-card: #161B22;
+  --color-card-hover: #1F2630;
+  --color-border: #30363D;
+  --color-border-subtle: #21262D;
+  --color-text: rgba(255, 255, 255, 0.92);
+  --color-text-secondary: rgba(255, 255, 255, 0.76);
+  --color-muted: rgba(255, 255, 255, 0.6);
+  --color-input-bg: #1F2630;
+  --color-input-focus: #28313E;
+  --color-success: #16A34A;
+  --color-success-subtle: #0B291A;
+  --color-danger: #E02424;
+  --color-danger-subtle: #331314;
+  --color-gold: #DDA335;
+  --color-gold-subtle: #332509;
+  --color-nav-bg: #161B22;
+  --shadow-card: 0 0 0 1px #30363D;
+}
+
+body {
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-mono,
+.tabular-nums {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.6);
+}
+
+/* Clean Print Stylesheet for Resume PDF Export */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  header,
+  nav,
+  aside,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #resume-print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
